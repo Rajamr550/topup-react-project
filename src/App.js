@@ -1,9 +1,8 @@
 import React from "react";
-// import DataFetching from "./getApiData";
-// import A from "./A";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import JsonDataDisplay from "./json";
-
 function App() {
   return (
     <div className="App">
