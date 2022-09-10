@@ -8,7 +8,7 @@ function JsonDataDisplay() {
     return (
         <div className="boot">
             <h1>List With Bootstrap Table</h1>
-            <Table striped  >
+            <Table bordered hover  >
                 <tbody>
                     <tr>
                         <td>ID</td>
