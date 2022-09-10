@@ -1,0 +1,17 @@
+Project - Mobile Top up
+choose plan, dummy payment page, receipt
+
+Create react application with three pages:
+    Choose Plan Page ~ to choose plans based on the api https://apis-react-training.herokuapp.com/getPlan
+    Payment Page ~ with the amount displayed, two buttons as Pay, Cancel. When user clicks on Pay take him to result page. When user clicks on Cancel, take him back to Choose Plan Page
+    Receipt Page ~ display amount and plan name
+
+    The application needs to persist state on the browser's local storage, with redux.
+    90% code coverage is expected.
+    The application needs to be hosted as static web on s3 using Terraform
+
+    Modules:
+
+    browserroute
+    persist
+    
