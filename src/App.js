@@ -8,12 +8,15 @@ import Payment from "./Payment";
 import NoMatch from "./NoMatch";
 import Layout from "./Layout";
 
-
+import { Provider } from "react-redux";
+import configureStore from './store';
 
 export default function App() {
+
   return (
     <div>
       <h1>Basic Example</h1>
+
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="home" element={<JsonDataDisplay />} />
@@ -22,6 +25,8 @@ export default function App() {
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
+
+
     </div>
   );
 }
