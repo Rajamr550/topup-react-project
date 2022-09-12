@@ -1,6 +1,5 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import JsonDataDisplay from "./json";
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Bill from "./Bill";
@@ -8,6 +7,8 @@ import Payment from "./Payment";
 import NoMatch from "./NoMatch";
 import Layout from "./Layout";
 
+// import reduxDemo from "./reduxDemo";
+import JsonDataDisplay from "./json";
 
 
 export default function App() {
