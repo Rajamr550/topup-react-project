@@ -10,37 +10,29 @@ import { createStore } from 'redux';
 
 
 
-const reducer = (state = " ", action) => {
-    switch (action.type) {
-        case 1:
-            state = action.payload;
-            return state;
+// const reducer = (state = " ", action) => {
+//     switch (action.type) {
+//         case 1:
+//             state = action.payload;
+//             return state;
 
-        default:
-            return state;
-    }
-};
+//         default:
+//             return state;
+//     }
+// };
 
 
-export const payStore = createStore(reducer);
+// export const payStore = createStore(reducer);
 
-payStore.subscribe(() => {
-    console.log('current bill state', payStore.getState());
-});
+// payStore.subscribe(() => {
+//     console.log('current bill state', payStore.getState());
+// });
 
 function Payment(props) {
 
 
 
-    function passToBill(val) {
 
-        payStore.dispatch({
-            type: 1,
-            payload: val
-        });
-
-        console.log("bill iten form pay ", val)
-    }
 
     const value = store.getState();
 
@@ -51,7 +43,7 @@ function Payment(props) {
             <h2>Amount {value}</h2>
 
 
-            <Link to="/Bill" className="btn btn-success" onClick={passToBill(value)}>PAY</Link>
+            <Link to="/Bill" className="btn btn-success">PAY</Link>
             <br></br>
             <br></br>
             <Link to="/home" className="btn btn-warning">Cancel</Link>

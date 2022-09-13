@@ -1,10 +1,11 @@
 import React from "react";
-import { payStore } from "./Payment"
+
+import { store } from "./json"
 
 
 function Bill(data) {
 
-    const state = payStore.getState();
+    const state = store.getState();
     return (
         <div className="Bill">
             <h1>Bill</h1>
