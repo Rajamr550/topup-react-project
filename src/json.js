@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom'
 import { createStore } from 'redux';
 
+import { useState } from 'react';
 
+import Child from './components/child';
 
-
-const reducer = (state = {}, action) => {
+const reducer = (state = " ", action) => {
     switch (action.type) {
         case 1:
             state = action.payload;
@@ -33,22 +34,22 @@ const reducer = (state = {}, action) => {
 };
 
 
-const store = createStore(reducer);
+export const store = createStore(reducer);
 
 store.subscribe(() => {
     console.log('current state', store.getState());
 });
 
 
-function fun(id, item) {
-
+export function fun(item) {
+    //const navigate = useNavigate();
     store.dispatch({
-        type: id,
-        payload: item
+        type: item.id,
+        payload: item.amount + " \n " + item.plan + " \n " + "  " + item.details
     });
 
     console.log("item ------ ", item)
-    //navigate("/pay")
+    //_navigate("/pay")
 }
 
 
@@ -57,12 +58,12 @@ function fun(id, item) {
 
 function JsonDataDisplay() {
     const datas = [{ "id": 1, "plan": "truly unlimited", "details": "12 GB data, 100 free sms per day, unlimited outgoing calls", "amount": 499, "validity": "3 months" }, { "id": 2, "plan": "cricket packs", "details": "Disney + hotstar subscription for 3 months, 2GB data, outgoing calls at 1p per second", "amount": 785, "validity": "45 days" }, { "id": 3, "plan": "smart recharge", "details": "2GB data per day, outgoing calls at 60p per minute, 100 free sms per day", "amount": 325, "validity": "30 days" }, { "id": 4, "plan": "international roaming", "details": "100 mins of incoming/outgoung (India+ Local) day, countries supported: Nepal, Srilanka, Bhutan, Pakistan, Bangladesh", "amount": 899, "validity": "30 days" }];
-
+    const [data, setData] = useState("temp")
     const navigate = useNavigate();
     return (
         <div className="boot">
-            <h1>TopUp Plans</h1>
-            <Table bordered hover  >
+            <h1> TopUp Plans</h1>
+            <Table bordered hover>
                 <tbody>
                     <tr>
                         <td>ID</td>
@@ -72,29 +73,36 @@ function JsonDataDisplay() {
                         <td>Validity</td>
                         <td>Choose Plan</td>
                     </tr>
-                    {
-                        datas.map((item, i) =>
-                            <tr key={i}>
-                                <td>{item.id}</td>
-                                <td>{item.plan}</td>
-                                <td>{item.details}</td>
-                                <td>{item.amount}</td>
-                                <td>{item.validity}</td>
-                                <td><Button variant="primary" onClick={
-                                    () => fun(item.id, item)
-                                    
+                    {datas.map((item, i) => <tr key={i}>
+                        <td>{item.id}</td>
+                        <td>{item.plan}</td>
+                        <td>{item.details}</td>
+                        <td>{item.amount}</td>
+                        <td>{item.validity}</td>
+                        <td><Button variant="primary" onClick={() => { fun(item); navigate("/pay"); }}>+</Button></td>
 
-}>+</Button></td>
+                        {/* <td><Button variant="primary" onClick={setData(item.amount)}>select</Button></td> */}
 
-                            </tr>
-                )
-                    }
-            </tbody>
-        </Table>
+                    </tr>
+                    )}
+                </tbody>
+
+
+
+
+            </Table>
+
+
+
+
 
         </div >
-    );
 
+
+
+
+
+    );
 
 
 

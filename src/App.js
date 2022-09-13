@@ -9,12 +9,12 @@ import Layout from "./Layout";
 
 // import reduxDemo from "./reduxDemo";
 import JsonDataDisplay from "./json";
+import Child from "./components/child";
 
 
 export default function App() {
   return (
     <div>
-      <h1>Basic Example</h1>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="home" element={<JsonDataDisplay />} />

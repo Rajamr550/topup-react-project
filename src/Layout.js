@@ -16,9 +16,13 @@ export default function Layout() {
                     <li>
                         <Link to="/pay">Payment</Link>
                     </li>
+                    {/* 
                     <li>
+                        <Link to="/child">child</Link>
+                    </li> */}
+                    {/* <li>
                         <Link to="/nothing-here">Nothing Here</Link>
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
 
