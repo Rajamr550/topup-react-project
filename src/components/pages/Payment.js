@@ -3,15 +3,20 @@ import { Link } from "react-router-dom";
 import { store } from "./Home";
 
 function Payment() {
+    var localData = "";
 
     const value = store.getState();
     console.log("storee -- ", store.getState());
 
-    localStorage.setItem("pay", value);
 
-
-    var localData = "";
     if (value !== "") {
+        localStorage.setItem("pay", value);
+
+        localData = localStorage.getItem("pay");
+
+    }
+
+    else {
         localData = localStorage.getItem("pay");
 
     }
