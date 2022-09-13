@@ -1,10 +1,7 @@
 import React, { useRef } from "react";
-
-import { store } from "./json"
-import { render } from "react-dom"
 import { useReactToPrint } from "react-to-print"
 
-function Bill(data) {
+function Bill() {
 
     const Print = () => {
         const compRef = useRef();

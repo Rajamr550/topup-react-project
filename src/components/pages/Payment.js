@@ -1,34 +1,16 @@
-import React, { useEffect, useState } from "react";
-import JsonDataDisplay from "./json";
-import { useSelector } from "react-redux";
+import React from "react";
 import { Link } from "react-router-dom";
-import Bill from "./Bill";
-import { connect } from "react-redux";
-import { store } from "./json"
+import { store } from "./Home";
 
-import { createStore } from 'redux';
-
-
-function Payment(props) {
-
-
-
-
+function Payment() {
 
     const value = store.getState();
-    console.log("storee -- ", store.getState())
-    //const [items, setItems] = useState(" ");
+    console.log("storee -- ", store.getState());
 
-    //localStorage.setItem("items", value);
-    // React.useEffect(() => {
-    //     localStorage.setItem("item", JSON.stringify(value));
-    // })
     localStorage.setItem("pay", value);
 
 
     var localData = "";
-    //localStorage.setItem("bill", "");
-
     if (value !== "") {
         localData = localStorage.getItem("pay");
 

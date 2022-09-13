@@ -1,16 +1,13 @@
-import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import './App.css';
-import { Routes, Route } from "react-router-dom";
-import Bill from "./Bill";
-import Payment from "./Payment";
-import NoMatch from "./NoMatch";
-import Layout from "./Layout";
+import Bill from "./components/pages/Bill";
+import Layout from "./components/pages/Layout";
+import NoMatch from "./components/pages/NoMatch";
+import Payment from "./components/pages/Payment";
+import JsonDataDisplay from "./components/pages/Home";
 
-// import reduxDemo from "./reduxDemo";
-import JsonDataDisplay from "./json";
-import Child from "./components/child";
-import Print from "./components/print";
 
 
 export default function App() {
@@ -21,8 +18,6 @@ export default function App() {
           <Route path="home" element={<JsonDataDisplay />} />
           <Route path="bill" element={<Bill />} />
           <Route path="pay" element={<Payment />} />
-          <Route path="print" element={<Print />} />
-
           <Route path="*" element={<NoMatch />} />
 
         </Route>

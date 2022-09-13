@@ -1,13 +1,10 @@
-import React from 'react'
-import { Table } from 'react-bootstrap'
+import React from 'react';
+import { Table } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import { createStore } from 'redux';
-
 import { useState } from 'react';
 
-import Child from './components/child';
 
 const reducer = (state = "", action) => {
     switch (action.type) {
@@ -42,21 +39,12 @@ store.subscribe(() => {
 
 
 export function fun(item) {
-    //const navigate = useNavigate();
     store.dispatch({
         type: item.id,
         payload: item.amount + item.plan + item.details + item.validity
-        // payload : JSON.stringify(item)
     });
 
     console.log("item ------ ", item)
-    //_navigate("/pay")
-
-    // React.useEffect(() => {
-    // })
-
-    //localStorage.setItem("pay", (item.amount + "\n" + item.plan + "\n" + "  " + item.details + " " + item.validity));
-
 }
 
 
@@ -88,9 +76,6 @@ function JsonDataDisplay() {
                         <td>{item.amount}</td>
                         <td>{item.validity}</td>
                         <td><Button variant="primary" onClick={() => { fun(item); navigate("/pay"); }}>+</Button></td>
-
-                        {/* <td><Button variant="primary" onClick={setData(item.amount)}>select</Button></td> */}
-
 
 
                     </tr>
