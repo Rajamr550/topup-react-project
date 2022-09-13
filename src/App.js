@@ -10,6 +10,7 @@ import Layout from "./Layout";
 // import reduxDemo from "./reduxDemo";
 import JsonDataDisplay from "./json";
 import Child from "./components/child";
+import Print from "./components/print";
 
 
 export default function App() {
@@ -20,7 +21,10 @@ export default function App() {
           <Route path="home" element={<JsonDataDisplay />} />
           <Route path="bill" element={<Bill />} />
           <Route path="pay" element={<Payment />} />
+          <Route path="print" element={<Print />} />
+
           <Route path="*" element={<NoMatch />} />
+
         </Route>
       </Routes>
     </div>

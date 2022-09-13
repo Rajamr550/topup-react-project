@@ -16,6 +16,10 @@ export default function Layout() {
                     <li>
                         <Link to="/pay">Payment</Link>
                     </li>
+
+                    <li>
+                        <Link to="/print">Print</Link>
+                    </li>
                     {/* 
                     <li>
                         <Link to="/child">child</Link>
