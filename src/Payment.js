@@ -27,7 +27,7 @@ function Payment(props) {
 
 
     var localData = "";
-    localStorage.setItem("bill", "");
+    //localStorage.setItem("bill", "");
 
     if (value !== "") {
         localData = localStorage.getItem("pay");
