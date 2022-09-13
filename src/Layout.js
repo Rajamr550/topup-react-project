@@ -10,7 +10,7 @@ export default function Layout() {
                     <li>
                         <Link to="/home">Home</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="/bill">Bill</Link>
                     </li>
                     <li>
@@ -19,7 +19,7 @@ export default function Layout() {
 
                     <li>
                         <Link to="/print">Print</Link>
-                    </li>
+                    </li> */}
                     {/* 
                     <li>
                         <Link to="/child">child</Link>

@@ -20,16 +20,27 @@ function Payment(props) {
     //const [items, setItems] = useState(" ");
 
     //localStorage.setItem("items", value);
-    React.useEffect(() => {
-        localStorage.setItem("item", JSON.stringify(value));
-    })
+    // React.useEffect(() => {
+    //     localStorage.setItem("item", JSON.stringify(value));
+    // })
+    localStorage.setItem("pay", value);
 
 
+    var localData = "";
+    localStorage.setItem("bill", "");
 
-    const localData = localStorage.getItem("pay");
+    if (value !== "") {
+        localData = localStorage.getItem("pay");
 
-    function handleClick() {
-        localStorage.clear();
+    }
+
+    function handlePayClick() {
+        const billValue = localStorage.getItem("pay");
+        localStorage.setItem("bill", billValue);
+    }
+
+    function handleCancelClick() {
+        localStorage.removeItem("pay");
     }
 
     return (
@@ -39,10 +50,10 @@ function Payment(props) {
             <h2>Amount {localData}</h2>
 
 
-            <Link to="/Bill" className="btn btn-success">PAY</Link>
+            <Link to="/Bill" className="btn btn-success" onClick={() => { handlePayClick(); }}>PAY</Link>
             <br></br>
             <br></br>
-            <Link to="/home" className="btn btn-warning" onClick={() => { handleClick(); }}>Cancel</Link>
+            <Link to="/home" className="btn btn-warning" onClick={() => { handleCancelClick(); }}>Cancel</Link>
 
         </div>
     )

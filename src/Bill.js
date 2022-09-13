@@ -20,7 +20,7 @@ function Bill(data) {
         )
     }
 
-    const state = localStorage.getItem("pay");
+    const state = localStorage.getItem("bill");
     return (
         <div className="Bill">
             <h1>Bill</h1>
