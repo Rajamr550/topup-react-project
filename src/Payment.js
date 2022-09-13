@@ -28,7 +28,9 @@ function Payment(props) {
 
     const localData = localStorage.getItem("pay");
 
-
+    function handleClick() {
+        localStorage.clear();
+    }
 
     return (
         <div className="Payment">
@@ -40,7 +42,7 @@ function Payment(props) {
             <Link to="/Bill" className="btn btn-success">PAY</Link>
             <br></br>
             <br></br>
-            <Link to="/home" className="btn btn-warning">Cancel</Link>
+            <Link to="/home" className="btn btn-warning" onClick={() => { handleClick(); }}>Cancel</Link>
 
         </div>
     )
