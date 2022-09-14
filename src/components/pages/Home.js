@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import { createStore } from 'redux';
 
+import { BrowserRouter } from 'react-router-dom';
 
 const reducer = (state = "", action) => {
     switch (action.type) {
