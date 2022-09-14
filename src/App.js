@@ -12,7 +12,7 @@ import JsonDataDisplay from "./components/pages/Home";
 
 export default function App() {
   return (
-    <div>
+    <div data-testid="app-test">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="home" element={<JsonDataDisplay />} />

@@ -31,7 +31,7 @@ function Payment() {
     }
 
     return (
-        <div className="Payment">
+        <div className="Payment" data-testid="payTest">
             <h1>Payment Page</h1>
 
             <h2>Amount {localData}</h2>

@@ -1,28 +1,12 @@
-import React, { useRef } from "react";
-import { useReactToPrint } from "react-to-print"
+import React from "react";
 
 function Bill() {
-
-    const Print = () => {
-        const compRef = useRef();
-        const handlePrint = useReactToPrint({
-            content: () => compRef.current,
-        });
-
-        return (
-            <div>
-                <Bill ref={compRef} />
-                <button onClick={handlePrint}>Print</button>
-            </div>
-        )
-    }
-
     const state = localStorage.getItem("bill");
     return (
-        <div className="Bill">
+        <div className="Bill" data-testid="billTest">
             <h1>Bill</h1>
             <h2>Your Receipt is </h2>
-            <h3>{state}</h3>
+            <h3 data-testid="billTestState">Bill Amount{state}</h3>
 
 
         </div>
