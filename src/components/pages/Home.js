@@ -41,7 +41,7 @@ store.subscribe(() => {
 export function fun(item) {
     store.dispatch({
         type: item.id,
-        payload: item.amount + item.plan + item.details + item.validity
+        payload: item.amount + " " +  item.plan + " " + item.details + " " +  item.validity
     });
 
     console.log("item ------ ", item)
