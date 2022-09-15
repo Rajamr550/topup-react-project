@@ -14,7 +14,10 @@ test('renders Home', () => {
     // expect(element).toHaveTextContent("Welcome to Vodafone Rechaarge App");
 
     expect(element).toHaveTextContent("Plans");
-    //expect(screen.getByText(/+/i)).toBeInTheDocument()
+    // expect(screen.getByText(/+/i)).toBeInTheDocument()
     expect(screen.getByText(/Plans/i)).toBeInTheDocument()
+    expect(screen.getByText(/ID/i)).toBeInTheDocument()
+    expect(screen.getByText(/Plan/i)).toBeInTheDocument()
+    expect(screen.getByText(/Details/i)).toBeInTheDocument()
 
 });
