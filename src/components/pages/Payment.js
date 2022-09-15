@@ -34,7 +34,7 @@ function Payment() {
         <div className="Payment" data-testid="payTest">
             <h1>Payment Page</h1>
 
-            <h2>Amount {localData}</h2>
+            <h2 data-testid="amount">Amount {localData}</h2>
 
 
             <Link to="/Bill" className="btn btn-success" onClick={() => { handlePayClick(); }}>PAY</Link>

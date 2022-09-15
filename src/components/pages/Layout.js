@@ -2,7 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 
 export default function Layout() {
     return (
-        <div>
+        <div data-testid="layoutTest">
             {/* A "layout route" is a good place to put markup you want to
             share across all the pages on your site, like navigation. */}
             <h1>Welcome to Vodafone Rechaarge App</h1>
